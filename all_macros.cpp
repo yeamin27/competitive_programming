@@ -38,7 +38,6 @@ int dy[] = { 1, 0, -1, 1, -1, 1, 0, -1 };
 #define print(args...)   print(args)
 #define fprint(args...)  fprint(args)
 #define scan(args...)    scan(args)
-#define fscan(args...)   fscan(args)
 #define deb(args...)     deb(args)
 
 void print() { return; }
@@ -50,12 +49,16 @@ template<typename T, typename... Args> void fprint(ll a, Args... args) { printf(
 void scan() { return; }
 template<typename T, typename... Args> void scan(T *a, Args... args) { cin >> *a; scan(args...); }
 
-void fscan() { return; }
-template<typename T, typename... Args> void fscan(T a, Args... args) { scanf("%I64d", &a); fscan(args...); }
-
 void deb() { cerr << endl; }
 template<typename T, typename... Args> void deb(T a, Args... args) { cerr << a << " "; deb(args...); }
 
+inline void fscan(ll *a)                      { scanf("%I64d", a); }
+inline void fscan(ll *a, ll *b)               { scanf("%I64d %I64d", a, b); }
+inline void fscan(ll *a, ll *b, ll *c)        { scanf("%I64d %I64d %I64d", a, b, c); }
+inline void fscan(ll *a, ll *b, ll *c, ll *d) { scanf("%I64d %I64d %I64d %I64d", a, b, c, d); }
+
+inline int Set(int N, int pos)                { return N = N | (1 << pos); }
+inline bool check(int N, int pos)             { return N = N & (1 << pos); }
 
 inline bool isVowel(char a)
 {
@@ -126,6 +129,7 @@ void sieve()
 
 int main()
 {
+	
 	
 	
 
