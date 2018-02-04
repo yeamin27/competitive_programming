@@ -52,10 +52,14 @@ template<typename T, typename... Args> void scan(T *a, Args... args) { cin >> *a
 void deb() { cerr << endl; }
 template<typename T, typename... Args> void deb(T a, Args... args) { cerr << a << " "; deb(args...); }
 
-inline void fscan(ll *a)                      { scanf("%I64d", a); }
-inline void fscan(ll *a, ll *b)               { scanf("%I64d %I64d", a, b); }
-inline void fscan(ll *a, ll *b, ll *c)        { scanf("%I64d %I64d %I64d", a, b, c); }
-inline void fscan(ll *a, ll *b, ll *c, ll *d) { scanf("%I64d %I64d %I64d %I64d", a, b, c, d); }
+inline void fscan(ll *a)                            { scanf("%I64d", a); }
+inline void fscan(ll *a, ll *b)                     { scanf("%I64d %I64d", a, b); }
+inline void fscan(ll *a, ll *b, ll *c)              { scanf("%I64d %I64d %I64d", a, b, c); }
+inline void fscan(ll *a, ll *b, ll *c, ll *d)       { scanf("%I64d %I64d %I64d %I64d", a, b, c, d); }
+inline void fscan(int *a)                           { scanf("%d", a); }
+inline void fscan(int *a, int *b)                   { scanf("%d %d", a, b); }
+inline void fscan(int *a, int *b, int *c)           { scanf("%d %d %d", a, b, c); }
+inline void fscan(int *a, int *b, int *c, int *d)   { scanf("%d %d %d %d", a, b, c, d); }
 
 inline int Set(int N, int pos)                { return N = N | (1 << pos); }
 inline bool check(int N, int pos)             { return N = N & (1 << pos); }
