@@ -31,6 +31,8 @@ int dy[] = { 1, 0, -1, 1, -1, 1, 0, -1 };
 #define NO               cout << "NO" << endl
 #define fYES             printf("YES\n")
 #define fNO              printf("NO\n")
+#define cas(a)           cout << "Case " << a << ":"
+#define fcas(a)          printf("Case %d:", a)
 #define spc              " "
 #define nln              "\n"
 
@@ -133,7 +135,6 @@ void sieve()
 
 int main()
 {
-	
 	
 	
 
