@@ -46,7 +46,7 @@ void print() { return; }
 template<typename T, typename... Args> void print(T a, Args... args) { cout << a; print(args...); }
 
 void fprint() { return; }
-template<typename T, typename... Args> void fprint(ll a, Args... args) { printf("%I64d", a); fprint(args...); }
+template<typename T, typename... Args> void fprint(T a, Args... args) { printf("%I64d", a); fprint(args...); }
 
 void scan() { return; }
 template<typename T, typename... Args> void scan(T *a, Args... args) { cin >> *a; scan(args...); }
