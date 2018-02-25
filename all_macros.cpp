@@ -44,13 +44,10 @@ int dyy[] = { 1, 0, -1, 1, -1, 1, 0, -1 };
 
 void print() { return; }
 template<typename T, typename... Args> void print(T a, Args... args) { cout << a; print(args...); }
-
 void fprint() { return; }
 template<typename T, typename... Args> void fprint(T a, Args... args) { printf("%I64d ", a); fprint(args...); }
-
 void scan() { return; }
 template<typename T, typename... Args> void scan(T *a, Args... args) { cin >> *a; scan(args...); }
-
 void deb() { cerr << endl; }
 template<typename T, typename... Args> void deb(T a, Args... args) { cerr << a << " "; deb(args...); }
 
