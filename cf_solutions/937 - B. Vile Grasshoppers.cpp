@@ -69,13 +69,30 @@ inline ll   fact(int n)      { ll ans = 1; for(int i = 2; i <= n; ++i)ans *= i; 
 ll bigMod(ll b,ll p,ll m)    { if(p==0)return 1%m; ll x=bigMod(b,p/2,m); x=(x*x)%m; if(p&1)x=(x*b)%m; return x; }
 ll pwr(ll n,int k)           { ll temp=0; if(k==0)return 1; temp=pwr(n,k/2); if(k&1)return n*temp*temp; else return temp*temp; }
 
-ll p[1100003];	
+ll p[1100002];	
 void sieve() { ll N=1100002,sq=sqrt(N),i,j; for(i=4;i<=N;i+=2)p[i]=1; for(i=3;i<=sq;i+=2){ if(p[i]==0){ for(j=i*i;j<=N;j+=i)p[j]=1; } } p[1]=1;p[0]=1; }
 
 int main()
 {
+	ll x, y, lim, j;
+	fscan(&x, &y);
 	
+	if( !(y&1) )
+		--y;
+		
+	for(ll i = y; i > x; i-=2)
+	{
+		lim = sqrt(i);
+		for(j = 3; j <= lim && j <= x; j+=2)
+			if(i%j == 0)
+				break;
+				
+		if(j > lim || j > x)
+			return cout << i << endl, 0;
+	}
 	
-
+	cout << -1 << endl;
+	
 	return 0;
 }
+	

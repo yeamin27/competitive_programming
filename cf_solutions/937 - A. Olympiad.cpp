@@ -69,13 +69,23 @@ inline ll   fact(int n)      { ll ans = 1; for(int i = 2; i <= n; ++i)ans *= i; 
 ll bigMod(ll b,ll p,ll m)    { if(p==0)return 1%m; ll x=bigMod(b,p/2,m); x=(x*x)%m; if(p&1)x=(x*b)%m; return x; }
 ll pwr(ll n,int k)           { ll temp=0; if(k==0)return 1; temp=pwr(n,k/2); if(k&1)return n*temp*temp; else return temp*temp; }
 
-ll p[1100003];	
+ll p[1100002];	
 void sieve() { ll N=1100002,sq=sqrt(N),i,j; for(i=4;i<=N;i+=2)p[i]=1; for(i=3;i<=sq;i+=2){ if(p[i]==0){ for(j=i*i;j<=N;j+=i)p[j]=1; } } p[1]=1;p[0]=1; }
 
 int main()
 {
+	int n, cnt = 0, x;
+	map<int, bool> mp;
 	
+	scan(&n);
+	for(int i = 0; i < n; ++i)
+	{
+		scan(&x);
+		if(x != 0 && !mp[x])
+			++cnt;
+		mp[x] = true;
+	}
+	print(cnt, nln);
 	
-
 	return 0;
 }
