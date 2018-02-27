@@ -140,24 +140,7 @@ int main()
 	for(int tc = 1; tc <= t; ++tc)
 	{
 		fscan(&n, &b);
-		
-		if(n == 0 || n == 1)
-			printf("Case %d: %d\n", tc, 1 );
-
-		else if(n == 2)
-		{
-			int cnt = 0;
-
-			while(n)
-			{
-				n /= b;
-				++cnt;
-			}
-			printf("Case %d: %d\n", tc, cnt);
-		}
-
-		else
-			printf("Case %d: %d\n", tc, (int) ceil( arr[n]/log(b+0.0) ) );
+		printf("Case %d: %d\n", tc, (int) ( arr[n]/log(b+0.0) )+1 );
 	}
 
 	return 0;
