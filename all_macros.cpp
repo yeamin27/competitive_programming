@@ -25,6 +25,10 @@ int dyy[] = { 1, 0, -1, 1, -1, 1, 0, -1 };
 #define F                first
 #define S                second
 #define mpp              make_pair
+#define SZ(x)		 	 ((int)(x.size()))
+#define all(x)			 (x.begin(), x.end())
+#define rep(a,b)		 for(int i = a; i < b; ++i)
+#define repr(a, b)		 for(int i = a; i > b; --i)
 #define FastIO           { ios_base::sync_with_stdio(false); cin.tie(0); }
 
 #define YES              cout << "YES" << endl
@@ -33,8 +37,6 @@ int dyy[] = { 1, 0, -1, 1, -1, 1, 0, -1 };
 #define fNO              printf("NO\n")
 #define cas(a)           cout << "Case " << a << ":"
 #define fcas(a)          printf("Case %d:", a)
-#define spc              " "
-#define nln              "\n"
 
 
 #define print(args...)   print(args)
@@ -61,7 +63,7 @@ inline void fscan(int *a, int *b, int *c)           { scanf("%d %d %d", a, b, c)
 inline void fscan(int *a, int *b, int *c, int *d)   { scanf("%d %d %d %d", a, b, c, d); }
 
 inline int  Set(int N, int pos)                     { return N = N | (1 << pos); }
-inline bool check(int N, int pos)                   { return (N = N & (1 << pos)); }
+inline bool Check(int N, int pos)                   { return (N = N & (1 << pos)); }
 
 inline bool isVowel(char a)  { a=tolower(a); if((a=='a')||(a=='e')||(a=='i')||(a=='o')||(a=='u'))return true; return false; }
 inline ll   fact(int n)      { ll ans = 1; for(int i = 2; i <= n; ++i)ans *= i; return ans; }
